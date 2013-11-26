@@ -36,7 +36,7 @@ public class LocationIntentService extends IntentService {
         Intent notifyIntent = new Intent(this, MainActivity.class);
         notifyIntent.putExtra("title", title);
         notifyIntent.putExtra("content", content);
-        notifyIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        notifyIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notifyIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
